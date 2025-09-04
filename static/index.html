@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Selector & File Upload with Gemini AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Animal Selector & File Upload App <span class="ai-badge">🤖 AI-Powered</span></h1>
+        
+        <!-- Animal Selection Box -->
+        <div class="box animal-box">
+            <h2>🐾 Select an Animal</h2>
+            <form id="animalForm" class="animal-form">
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="animal" value="cat" class="animal-checkbox">
+                        <span class="checkmark"></span>
+                        🐱 Cat
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="animal" value="dog" class="animal-checkbox">
+                        <span class="checkmark"></span>
+                        🐶 Dog
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="animal" value="elephant" class="animal-checkbox">
+                        <span class="checkmark"></span>
+                        🐘 Elephant
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Show Animal</button>
+                <button type="button" id="getAnimalInfoBtn" class="btn btn-ai" style="display: none;">
+                    🤖 Get AI Facts
+                </button>
+            </form>
+            
+            <!-- Animal Display Area -->
+            <div id="animalDisplay" class="animal-display">
+                <div id="animalMessage" class="message"></div>
+                <div id="animalImageContainer" class="image-container">
+                    <img id="animalImage" src="" alt="" style="display: none;">
+                </div>
+                <!-- AI Animal Info Display -->
+                <div id="animalAIInfo" class="ai-info" style="display: none;">
+                    <h3>🤖 AI-Generated Facts</h3>
+                    <div id="animalAIContent" class="ai-content"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- File Upload Box -->
+        <div class="box file-box">
+            <h2>📁 Upload a File</h2>
+            <form id="fileForm" class="file-form">
+                <div class="file-input-container">
+                    <input type="file" id="fileInput" name="file" class="file-input">
+                    <label for="fileInput" class="file-label">
+                        <span class="file-icon">📎</span>
+                        <span class="file-text">Choose a file or drag it here</span>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-secondary">Upload File</button>
+                <button type="button" id="analyzeImageBtn" class="btn btn-ai" style="display: none;">
+                    🤖 Analyze with AI
+                </button>
+            </form>
+            
+            <!-- File Info Display Area -->
+            <div id="fileDisplay" class="file-display">
+                <div id="fileMessage" class="message"></div>
+                <div id="fileInfo" class="file-info"></div>
+                <!-- AI Image Analysis Display -->
+                <div id="imageAIAnalysis" class="ai-info" style="display: none;">
+                    <h3>🤖 AI Image Analysis</h3>
+                    <div id="imageAIContent" class="ai-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
